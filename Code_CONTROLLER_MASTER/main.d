@@ -1,0 +1,11 @@
+main.o: main.c
+main.o: Q:\uVision4.5\ARM\RV31\Inc\stdint.h
+main.o: Q:\uVision4.5\ARM\RV31\Inc\stdio.h
+main.o: Q:\uVision4.5\ARM\RV31\Inc\stdlib.h
+main.o: Q:\uVision4.5\ARM\Inc\Luminary\lm4f120h5qr.h
+main.o: board_config.h
+main.o: inc/hw_types.h
+main.o: gpio.h
+main.o: Q:\uVision4.5\ARM\RV31\Inc\stdbool.h
+main.o: UART.h
+main.o: Q:\uVision4.5\ARM\RV31\Inc\errno.h

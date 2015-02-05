@@ -1,0 +1,9 @@
+timer.o: timer.c
+timer.o: Q:\uVision4.5\ARM\RV31\Inc\stdint.h
+timer.o: Q:\uVision4.5\ARM\RV31\Inc\stdio.h
+timer.o: Q:\uVision4.5\ARM\RV31\Inc\stdlib.h
+timer.o: Q:\uVision4.5\ARM\RV31\Inc\stdbool.h
+timer.o: Q:\uVision4.5\ARM\Inc\Luminary\lm4f120h5qr.h
+timer.o: gpio.h
+timer.o: uart.h
+timer.o: Q:\uVision4.5\ARM\RV31\Inc\errno.h

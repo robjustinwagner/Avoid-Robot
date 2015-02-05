@@ -1,0 +1,12 @@
+main.o: main.c
+main.o: C:\Keil\ARM\RV31\Inc\stdint.h
+main.o: C:\Keil\ARM\RV31\Inc\stdio.h
+main.o: C:\Keil\ARM\RV31\Inc\stdlib.h
+main.o: lm4f120h5qr.h
+main.o: board_config.h
+main.o: inc/hw_types.h
+main.o: gpio.h
+main.o: C:\Keil\ARM\RV31\Inc\stdbool.h
+main.o: UART.h
+main.o: C:\Keil\ARM\RV31\Inc\errno.h
+main.o: team.h

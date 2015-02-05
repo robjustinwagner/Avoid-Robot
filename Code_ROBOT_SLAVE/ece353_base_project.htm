@@ -1,0 +1,250 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [I:\315\Project - Revision 6\Final Revision\Code_ROBOT_SLAVE\ece353_base_project.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image I:\315\Project - Revision 6\Final Revision\Code_ROBOT_SLAVE\ece353_base_project.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Wed Mar 12 19:40:03 2014
+<BR><P>
+<H3>Maximum Stack Usage =         16 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+main &rArr; checkUART
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[0]">Reset_Handler</a>
+ <LI><a href="#[1]">NmiSR</a>
+ <LI><a href="#[2]">FaultISR</a>
+ <LI><a href="#[3]">IntDefaultHandler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[1]">NmiSR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1]">NmiSR</a><BR>
+ <LI><a href="#[2]">FaultISR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[2]">FaultISR</a><BR>
+ <LI><a href="#[3]">IntDefaultHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3]">IntDefaultHandler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[2]">FaultISR</a> from startup.o(RESET) referenced from startup.o(RESET)
+ <LI><a href="#[3]">IntDefaultHandler</a> from startup.o(RESET) referenced 45 times from startup.o(RESET)
+ <LI><a href="#[5]">Motor0Handler</a> from gpiohandler.o(.text) referenced from startup.o(RESET)
+ <LI><a href="#[1]">NmiSR</a> from startup.o(RESET) referenced from startup.o(RESET)
+ <LI><a href="#[0]">Reset_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
+ <LI><a href="#[4]">SYSTICKIntHandler</a> from systick.o(.text) referenced from startup.o(RESET)
+ <LI><a href="#[6]">Timer0Handler</a> from timer.o(.text) referenced 2 times from startup.o(RESET)
+ <LI><a href="#[7]">Timer1Handler</a> from timer.o(.text) referenced 2 times from startup.o(RESET)
+ <LI><a href="#[8]">main</a> from main.o(.text) referenced from entry8.o(.ARM.Collect$$$$00000009)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[9]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
+</UL>
+
+<P><STRONG><a name="[1f]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+
+<P><STRONG><a name="[a]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[1e]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[20]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+
+<P><STRONG><a name="[21]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8.o(.ARM.Collect$$$$00000009))
+
+<P><STRONG><a name="[22]"></a>GetADCval</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
+
+<P><STRONG><a name="[1b]"></a>GetADC1val</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkOpticalSensor
+</UL>
+
+<P><STRONG><a name="[23]"></a>initializeADC</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
+
+<P><STRONG><a name="[12]"></a>initializeADC1</STRONG> (Thumb, 122 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = initializeADC1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[10]"></a>gpioPortInit</STRONG> (Thumb, 314 bytes, Stack size 16 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = gpioPortInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[17]"></a>checkDutyCycle</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSTICKIntHandler
+</UL>
+
+<P><STRONG><a name="[24]"></a>setDirection</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, main.o(.text), UNUSED)
+
+<P><STRONG><a name="[8]"></a>main</STRONG> (Thumb, 382 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = main &rArr; checkUART
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartTxPoll
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeTimer1
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeTimer0
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeSysTick
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeGPIOPort
+<LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initMotor0Int
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkUltrasonicSensor1
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkUltrasonicSensor0
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkUART
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkOpticalSensor
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_Init
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkDutyCycle
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpioPortInit
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeADC1
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> entry8.o(.ARM.Collect$$$$00000009)
+</UL>
+<P><STRONG><a name="[4]"></a>SYSTICKIntHandler</STRONG> (Thumb, 768 bytes, Stack size 8 bytes, systick.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SYSTICKIntHandler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkDutyCycle
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[11]"></a>initializeSysTick</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, systick.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = initializeSysTick
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[6]"></a>Timer0Handler</STRONG> (Thumb, 464 bytes, Stack size 0 bytes, timer.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[7]"></a>Timer1Handler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, timer.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[13]"></a>initializeTimer0</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, timer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[14]"></a>initializeTimer1</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, timer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[19]"></a>checkUltrasonicSensor0</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, sensor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1a]"></a>checkUltrasonicSensor1</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, sensor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[18]"></a>checkOpticalSensor</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, sensor.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = checkOpticalSensor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetADC1val
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[e]"></a>initUART</STRONG> (Thumb, 132 bytes, Stack size 8 bytes, uart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = initUART
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1d]"></a>uartRxPoll</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, uart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configXBEE
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkUART
+</UL>
+
+<P><STRONG><a name="[f]"></a>uartTxPoll</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, uart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configXBEE
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[25]"></a>uartTxPollChar</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, uart.o(.text), UNUSED)
+
+<P><STRONG><a name="[1c]"></a>configXBEE</STRONG> (Thumb, 504 bytes, Stack size 56 bytes, xbee.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartRxPoll
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartTxPoll
+</UL>
+
+<P><STRONG><a name="[16]"></a>checkUART</STRONG> (Thumb, 242 bytes, Stack size 16 bytes, xbee.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = checkUART
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartRxPoll
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[5]"></a>Motor0Handler</STRONG> (Thumb, 116 bytes, Stack size 0 bytes, gpiohandler.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[15]"></a>initMotor0Int</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, gpiohandler.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[c]"></a>PLL_Init</STRONG> (Thumb, 134 bytes, Stack size 0 bytes, pll.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[d]"></a>initializeGPIOPort</STRONG> (Thumb, 272 bytes, Stack size 8 bytes, gpio.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = initializeGPIOPort
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[26]"></a>GPIOPortButtonPressed</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, gpio.o(.text), UNUSED)
+
+<P><STRONG><a name="[b]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+</UL>
+
+<P><STRONG><a name="[27]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[28]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[29]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[2a]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[1]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[2]"></a>FaultISR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[3]"></a>IntDefaultHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

@@ -1,0 +1,4 @@
+--cpu Cortex-M4.fp "startup.o" "main.o" "systick.o" "timer.o" "sensor.o" "uart.o" "xbee.o" "gpiohandler.o" "I:\315\Project - Revision 6\Final Revision\Code_ROBOT_SLAVE\lib\pll.lib" "I:\315\Project - Revision 6\Final Revision\Code_ROBOT_SLAVE\lib\uart.lib" "I:\315\Project - Revision 6\Final Revision\Code_ROBOT_SLAVE\lib\gpio.lib" --library_type=microlib --strict --scatter ".\ece353.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\ece353_base_project.map" -o ece353_base_project.axf

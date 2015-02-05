@@ -1,0 +1,9 @@
+sensor.o: Sensor.c
+sensor.o: Q:\uVision4.5\ARM\RV31\Inc\stdint.h
+sensor.o: Q:\uVision4.5\ARM\RV31\Inc\stdio.h
+sensor.o: Q:\uVision4.5\ARM\RV31\Inc\stdlib.h
+sensor.o: lm4f120h5qr.h
+sensor.o: gpio.h
+sensor.o: Q:\uVision4.5\ARM\RV31\Inc\stdbool.h
+sensor.o: uart.h
+sensor.o: Q:\uVision4.5\ARM\RV31\Inc\errno.h
